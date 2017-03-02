@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{B0D71564-89BD-442F-94EF-2AA4BBAC22F8}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{D0A4676E-1B0B-4FC1-82C2-E54B3D1A7461}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyLvaH8sp3EW5uN42KchLwAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABGZuKT8e3Vl2e41vTbeZR4LqkSpEQkXXfbRaU9mrVpVwAAAAAOgAAAAAIAACAAAACDKEOXH3GAoRVWAKkpIHkmi3DfwDERhwn9Vo/dJ4LKf0AAAAA9XE13GIZmSlP9VMB3Ir8aIhh/Bd6ITtrAmqmC6XyV56TPmaSuzivXBh4TvRtuET07XuzJjpRTalBEPvi9zoaBQAAAAN3u2imIiIOUsZZGEiY0qIhsppG3IdHmlCXh61dC7Iif95M0lVEsAT7oVjZUPOKHMARvSfVU8cPDsR/E18k1eIE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyLvaH8sp3EW5uN42KchLwAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAqzrN9UvT3Nnakzj+SpOK6TM/JGNAQST1tErF/2IilyAAAAAAOgAAAAAIAACAAAADfWYVG5yrmzYeE+dTkBK0NrZ3Z4boGJsxtjzPyDMyf6kAAAADDaI2nxDaRt7bbNBwfGBM367s1tqQrqaTv5+W80BsuhnuEq2TNcogQCb94jIWHJN/m1aAd2DyykN5aOjh+ZrUWQAAAAFxJxjcBvMM+wlvjgbH7CfZsDoY5fdL4M6AWBVUSWgxh+f7Nhqq9sJ9rzPsdYyHAXrPcoZ+htZXolMneYcY6RJk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -186,7 +186,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select top 5 * from mytable</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -203,7 +203,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -304,13 +304,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="64.5,24.75" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="142.5,150.625" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="64.5,24.75" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="139.5,66.75">
@@ -349,7 +349,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -362,7 +362,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
